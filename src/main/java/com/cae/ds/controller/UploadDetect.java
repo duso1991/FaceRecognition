@@ -45,10 +45,11 @@ public class UploadDetect {
 		HashMap map = new HashMap();
 		//
 		map.put("face_fields", "age,beauty,expression,gender,glasses,race,qualities");
-		/*
-		 * String path = "C:/Users/DUS/Desktop/face/face3.jpg";
-		 */AipRequest aipRequest = new AipRequest();
+		
+		AipRequest aipRequest = new AipRequest();
 		aipRequest.setBody(map);
+		
+		//将上传的文件流进行检测
 		JSONObject result = face.detect(file.getBytes(), map);
 		return result.toString();
 	}

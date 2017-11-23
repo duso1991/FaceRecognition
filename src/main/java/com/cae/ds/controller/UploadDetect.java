@@ -49,7 +49,7 @@ public class UploadDetect {
 		AipRequest aipRequest = new AipRequest();
 		aipRequest.setBody(map);
 		
-		//将上传的文件流进行检测
+		//将上传的文件流进行ji
 		JSONObject result = face.detect(file.getBytes(), map);
 		return result.toString();
 	}
